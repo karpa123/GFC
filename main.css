@@ -1,0 +1,210 @@
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#backButton {
+    background-color: white;
+    font: 16px sans-serif;
+    color: red;
+    border: 1px solid red;
+    width: 50px;
+    height: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#backButton:hover {
+    border-color: white;
+    background-color: red;
+    color: white;
+}
+
+.startButton {
+    position: fixed;
+    bottom: 50%;
+    right: 50%;
+    font: 600 28px sans-serif;
+    border: 2px solid black;
+    padding: 4px;
+    opacity: 1;
+    transition: opacity .2s;
+    z-index: 2;
+    background: white;
+    border-radius: 20%;
+}
+
+.startButton:active {
+    opacity: .5;
+}
+
+.question {
+    margin: 20px 75px;
+    font: 400 16px serif;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2);
+    padding: 2px;
+    text-align: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+}
+
+.answer {
+    position: fixed;
+    width: 50%;
+    height: 30%;
+    box-shadow: 0 0 0 2px rgba(71, 236, 71, 0.2);
+    padding: 25px 10px;
+    text-align: center;
+    opacity: 1;
+    bottom: 0;
+    transition: bottom 1s, box-shadow 1s, opacity .2s;
+    user-select: none;
+    background: whitesmoke;
+}
+
+.answer:hover {
+    bottom: 5%;
+    box-shadow: 0 0 0 2px rgba(71, 236, 71, .4);
+}
+
+.answer:active {
+    opacity: .5;
+}
+
+.scoreContainerContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreContainer {
+    font: 16px 400 serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+    background: white;
+    z-index: 5;
+    border-radius: 10%;
+}
+
+.preScore {
+    display: inline-block;
+}
+
+.displayScore {
+    font: 700 40px sans-serif;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.imageExplanation {
+    height: 20%;
+    position: fixed;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    text-align: center;
+    font: 500 16px serif;
+    background: white;
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.imageExplanation button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 16px serif;
+}
+
+.finalImage {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    object-fit: contain;
+}
+
+#canvas {
+    z-index: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.menu #canvas {
+    background: lightskyblue;
+}
+
+.game1 #canvas {
+    background: beige;
+    height: calc(70vh + 2px);
+}
+.game2 #canvas {
+    background: beige;
+    height: calc(70vh + 2px);
+
+}
+.game3 #canvas {
+    background: beige;
+    height: calc(70vh + 2px);
+}
+
+.opacityBackground {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.confirmSquare {
+    width: 35vw;
+    height: 35vh;
+    border-radius: 5%;
+    border: 2px solid black;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    font: 400 16px sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+}
+
+.confirmButton {
+    background-color: white;
+    font: 700 20px sans-serif;
+    color: darkblue;
+    border: 1px solid darkblue;
+    height: 5vh;
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmButton:hover {
+    border-color: white;
+    background-color: darkblue;
+    color: white;
+}
